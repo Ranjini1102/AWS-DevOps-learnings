@@ -26,10 +26,10 @@ This repository contains my DevOps learning and practice work.
 
 
 ### Pipeline Success
-![Pipeline Success](screenshots/pipeline-success.png)
+![Pipeline Success](screenshots/pipeline-success.jpeg)
 
 ### Console Output
-![Console Output](screenshots/console-output.png)
+![Console Output](screenshots/console-output.jpeg)
 
 ### Note
 EC2 configuration files are not included as this repository
