@@ -22,6 +22,14 @@ This repository contains my DevOps learning and practice work.
 ### CI Pipeline
 - Pipeline written using Declarative Jenkinsfile
 - Stages: Check system → Build → Test
+  ## Jenkins Pipeline Screenshots
+
+
+### Pipeline Success
+![Pipeline Success](screenshots/pipeline-success.png)
+
+### Console Output
+![Console Output](screenshots/console-output.png)
 
 ### Note
 EC2 configuration files are not included as this repository
