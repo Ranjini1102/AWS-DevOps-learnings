@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+
+    environment {
+        PROJECT_NAME = "Beginner DevOps Pipeline"
+    }
+
+    stages {
+
+        stage('Start Pipeline') {
+            steps {
+                echo "Starting Jenkins Pipeline for ${PROJECT_NAME}"
+            }
+        }
+
+        stage('Check System Info') {
+            steps {
+                sh '''
+                echo "User:"
+                whoami
+                echo "Current Directory:"
+                pwd
+                echo "System Info:"
+                uname -a
+                '''
+            }
+        }
+
+        stage('Check Git') {
+            steps {
+                sh '''
+                echo "Checking Git version"
+                git --version || echo "Git not installed"
+                '''
+            }
+        }
+
+        stage('Build Stage (Demo)') {
+            steps {
+                sh '''
+                echo "Simulating build process..."
+                sleep 3
+                echo "Build completed successfully"
+                '''
+            }
+        }
+
+        stage('Post Build Message') {
+            steps {
+                echo "Pipeline executed successfully 🎉"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ SUCCESS: Jenkins pipeline completed without errors"
+        }
+        failure {
+            echo "❌ FAILURE: Please check logs"
+        }
+        always {
+            echo "Pipeline finished execution"
+        }
+    }
+}
